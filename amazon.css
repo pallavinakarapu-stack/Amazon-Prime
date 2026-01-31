@@ -1,0 +1,208 @@
+/* GLOBAL FIX */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+  background-color: #0f171e;
+  color: white;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #1a242f;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00a8e1;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #00a8e1;
+}
+
+.signin {
+  padding: 8px 16px;
+  background-color: #00a8e1;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 80vh;
+  background: linear-gradient(to right, rgba(15,23,30,0.9), rgba(15,23,30,0.3)),
+              url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.cta {
+  padding: 12px 25px;
+  background-color: #00a8e1;
+  border: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* SECTION TITLE */
+.title {
+  color: #fff;
+  opacity: 0.9;
+  padding-left: 4%;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+/* Movies List */
+.movies-list {
+  width: 100%;
+  min-height: 260px;
+  margin: 10px 0 30px;
+  overflow: hidden;
+}
+
+.card-container {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.card {
+  min-width: 150px;
+  height: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #030b17;
+  transition: 0.4s;
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.12);
+  z-index: 2;
+}
+
+.card-body {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #192133 90%);
+  padding: 10px;
+  transition: 0.4s;
+}
+
+.card:hover .card-body {
+  opacity: 1;
+}
+
+.name {
+  margin-top: 60%;
+  font-size: 14px;
+}
+
+.watchlist-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.watchlist-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.watch-now {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1a242f;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #000;
+  width: 60%;
+  margin: 8% auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.close {
+  font-size: 28px;
+  float: right;
+  cursor: pointer;
+}
